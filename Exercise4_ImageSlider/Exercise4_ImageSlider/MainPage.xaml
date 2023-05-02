@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Exercise4_ImageSlider.MarkupExtensions"
+             x:Class="Exercise4_ImageSlider.MainPage"
+             BackgroundColor="Black"
+             >
+
+    <StackLayout  Padding="0,20,0,10" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" BackgroundColor="Black">
+        <Grid HorizontalOptions="CenterAndExpand" RowSpacing="3" ColumnSpacing="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="500"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Prev & Next Buttons, Slide Indicator, Image source-->
+            <Button x:Name="Prev" Clicked="Prev_Clicked" Text="&lt;" BackgroundColor="Transparent" TextColor="White" FontSize="50" Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="IndicatorText"  Text="1 OF 3" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="0" TextColor="White" FontSize="Medium" Grid.Column="1" />
+            <Button x:Name="Next" Clicked="Next_Clicked" Text="&gt;" BackgroundColor="Transparent" TextColor="White" FontSize="50" Grid.Row="0" Grid.Column="2"/>
+            <Image x:Name="Image_Slide" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+            
+            <!-- Source Option Buttons-->
+            <Button x:Name="URI" Clicked="Btn_Clicked" Text="URI" WidthRequest="130" BorderColor="White" BorderWidth="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  BackgroundColor="Transparent" TextColor="White" FontSize="15" Grid.Row="2" Grid.Column="0"/>
+            <Button x:Name="Embedded" Clicked="Btn_Clicked" Text="Embedded" WidthRequest="130" BorderColor="White" BorderWidth="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" TextColor="White" FontSize="15" Grid.Row="2" Grid.Column="1"/>
+            <Button x:Name="Local" Clicked="Btn_Clicked" Text="Local" WidthRequest="130" BorderColor="White" BorderWidth="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" TextColor="White" FontSize="15" Grid.Row="2" Grid.Column="2"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
